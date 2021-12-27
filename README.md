@@ -1,7 +1,7 @@
 # OptifineM5-source-patched
 Want to code a 1.8 client/"jar mod" without Forge ? Here is the Optifine M5 source code free from Forge hooks.
 
-After coding a PvP Client for a while, I realized I needed to patch a lot of things in MC source code every time I created a new workspace, so I work a bit on a source code that I will reuse.<br>
+After coding a PvP Client for a while, I realized I needed to patch a lot of things in MC source code every time I created a new workspace, so I worked a bit on a source code that I will reuse.<br>
 Patches include : <br>
 - Fixing variable names, though not in all classes. ```GameSettings``` was especially tricky because all the keybind names are initially shifted up.<br>
 - Using primitives over Object whenever possible. 1.8 Minecraft code really is ancient with all the ```Integer.valueOf(int)```, ```Boolean.valueOf(boolean)```, etc. Coding in a compilator-friendly way was necessary before like java 1.5, but even for something as old as 1.8, it'll not do much but hinder the compilator.<br>

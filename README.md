@@ -1,5 +1,5 @@
 # OptifineM5-source-patched
-Want to code a 1.8 client/"jar mod" without Forge ? Here is the Optifine M5 source code free from Forge hook.
+Want to code a 1.8 client/"jar mod" without Forge ? Here is the Optifine M5 source code free from Forge hooks.
 
 After coding a PvP Client for a while, I realized I needed to patch a lot of things in MC source code every time I created a new workspace, so I work a bit on a source code that I will reuse.<br>
 Patches include : <br>

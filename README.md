@@ -5,10 +5,10 @@ After coding a PvP Client for a while, I realized I needed to patch a lot of thi
 Patches include : <br>
 - Fixing variable names, though not in all classes. ```GameSettings``` was especially tricky because all the keybind names are initially shifted up.<br>
 - Using primitives over Object whenever possible. 1.8 Minecraft code really is ancient with all the ```Integer.valueOf(int)```, ```Boolean.valueOf(boolean)```, etc. Coding in a compilator-friendly way was necessary before like java 1.5, but even for something as old as 1.8, it'll not do much but hinder the compilator.<br>
-- Using ```switch()``` over ```if...else if....else``` for readability and easier understanding, though I turned crazy after a few files.<br>
-- Removing useless brackets that cause headache to readers in the first 100 files in ```net.minecraft.block```. If you like brackets even for a single instruction, then switch from eclipse to IntelliJ.<br>
+- Using ```switch()``` over ```if...else if....else``` for readability, though I turned crazy after a few files.<br>
+- Removing useless brackets that cause headache to readers in the first 100 files in the ```net.minecraft.block``` package. If you like brackets even for a single instruction, then switch from eclipse to IntelliJ.<br>
 - Removing **unused** ```AtomicInteger field_175373_f``` in ```net.minecraft.client.gui.GuiMainMenu```.<br>
-- Removing every single Forge hooks in ```net.optifine.reflect.Reflector``` that are being null checked every time a Forge event would have been posted if we were on using Forge.<br>
+- Removing every single Forge hooks in ```net.optifine.reflect.Reflector``` that are being null checked every time a Forge event would have been posted if we were using Forge.<br>
 - Removing every classes except ```ITransformation``` located in the ```net.minecraftforge``` package which is of no use. ```ITransformation``` was thus put into ```net.minecraft.client.renderer.block.model```.<br>
 <br>
 
